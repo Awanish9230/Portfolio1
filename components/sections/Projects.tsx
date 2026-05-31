@@ -20,10 +20,9 @@ const projects = [
       "Automated AI credit scoring",
       "Secure biometric authentication",
       "Financial dashboard analytics",
-    ],
     github: "https://github.com/Awanish9230/IntelliCred",
     demo: "https://intellicred.onrender.com/",
-    visualType: "intellicred", // used to render specific visual effects
+    visualType: "intellicred",
   },
   {
     title: "KRYZO",
@@ -71,7 +70,6 @@ const ProjectVisual = ({ type, color }: { type: string, color: string }) => {
   if (type === "intellicred") {
     return (
       <div className="absolute inset-0 overflow-hidden bg-slate-950/80 rounded-3xl">
-        {/* Hologram / Neural Network Particles */}
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#3b82f61a_1px,transparent_1px),linear-gradient(to_bottom,#3b82f61a_1px,transparent_1px)] bg-[size:40px_40px]"></div>
         <motion.div
           animate={{ scale: [1, 1.1, 1], opacity: [0.3, 0.6, 0.3] }}
@@ -84,7 +82,6 @@ const ProjectVisual = ({ type, color }: { type: string, color: string }) => {
             </div>
           </div>
         </motion.div>
-        {/* Scanning line */}
         <motion.div
           animate={{ y: [-150, 150, -150] }}
           transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
@@ -97,7 +94,6 @@ const ProjectVisual = ({ type, color }: { type: string, color: string }) => {
   if (type === "kryzo") {
     return (
       <div className="absolute inset-0 overflow-hidden bg-slate-950/80 rounded-3xl">
-        {/* Code floating effect */}
         <div className="absolute inset-0 opacity-20 font-mono text-xs text-purple-400 p-4 whitespace-pre select-none overflow-hidden flex flex-col gap-2">
           <motion.div animate={{ x: [-20, 0, -20] }} transition={{ duration: 5, repeat: Infinity }}>
             {`function diagnose(code) { \n  return ai.analyze(code);\n}` }
@@ -124,10 +120,8 @@ const ProjectVisual = ({ type, color }: { type: string, color: string }) => {
   if (type === "arelix") {
     return (
       <div className="absolute inset-0 overflow-hidden bg-slate-950/80 rounded-3xl flex items-end">
-        {/* Financial Grid */}
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#10b9811a_1px,transparent_1px),linear-gradient(to_bottom,#10b9811a_1px,transparent_1px)] bg-[size:30px_30px]"></div>
         
-        {/* Animated Candlesticks & Lines */}
         <div className="absolute inset-0 flex items-end justify-around px-8 pb-12 opacity-40">
            {[40, 70, 45, 90, 60, 110, 80].map((h, i) => (
              <motion.div
@@ -206,12 +200,10 @@ export function Projects() {
                 transition={{ duration: 0.8 }}
                 className="group relative"
               >
-                {/* Background Glow */}
                 <div className={`absolute inset-0 bg-gradient-to-r ${project.color} opacity-0 group-hover:opacity-5 blur-3xl transition-opacity duration-700 rounded-3xl -z-10`}></div>
 
                 <div className={`flex flex-col ${isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-12 lg:gap-16 items-center`}>
                   
-                  {/* Left: 3D Visual Box */}
                   <div className="w-full lg:w-[50%] h-[400px] lg:h-[500px] relative rounded-3xl p-1">
                     <div className={`absolute inset-0 bg-gradient-to-br ${project.color} opacity-20 rounded-3xl`}></div>
                     <div className={`relative w-full h-full rounded-3xl border border-white/10 ${project.border} transition-colors duration-500 overflow-hidden shadow-2xl ${project.shadow}`}>
@@ -219,7 +211,6 @@ export function Projects() {
                     </div>
                   </div>
 
-                  {/* Right: Project Details */}
                   <div className="w-full lg:w-[50%] flex flex-col justify-center space-y-8">
                     
                     <div>
@@ -234,7 +225,6 @@ export function Projects() {
                       </p>
                     </div>
 
-                    {/* Stats */}
                     <div className="grid grid-cols-3 gap-4 py-4 border-y border-white/5">
                       {project.stats.map((stat, i) => (
                         <div key={i} className="flex flex-col gap-1">
@@ -244,7 +234,6 @@ export function Projects() {
                       ))}
                     </div>
 
-                    {/* Key Features */}
                     <ul className="space-y-3">
                       {project.features.map((feature, i) => (
                         <li key={i} className="flex items-center text-gray-300 gap-3">
@@ -254,7 +243,6 @@ export function Projects() {
                       ))}
                     </ul>
 
-                    {/* Tags */}
                     <div className="flex flex-wrap gap-2">
                       {project.tags.map((tag, i) => (
                         <span key={i} className="px-3 py-1.5 bg-white/5 border border-white/10 rounded-lg text-sm text-gray-300">
@@ -263,7 +251,6 @@ export function Projects() {
                       ))}
                     </div>
                     
-                    {/* Action Buttons */}
                     <div className="flex flex-wrap gap-4 pt-4">
                       <a
                         href={project.github}
@@ -292,7 +279,6 @@ export function Projects() {
           })}
         </div>
 
-        {/* BOTTOM CTA SECTION */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -300,7 +286,6 @@ export function Projects() {
           transition={{ duration: 0.8 }}
           className="mt-40 relative rounded-3xl overflow-hidden"
         >
-          {/* CTA Background */}
           <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-purple-900/20 to-cyan-900/20"></div>
           <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff0a_1px,transparent_1px),linear-gradient(to_bottom,#ffffff0a_1px,transparent_1px)] bg-[size:20px_20px]"></div>
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-1 bg-gradient-to-r from-transparent via-accent-cyan to-transparent"></div>

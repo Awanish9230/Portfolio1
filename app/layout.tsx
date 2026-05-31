@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     title: "Awanish Kumar Verma | Portfolio",
     description: "Full Stack Developer & AI Enthusiast",
     type: "website",
-    url: "https://awanish-portfolio.vercel.app", // Replace with actual URL
+    url: "https://awanish-portfolio.vercel.app",
   },
 };
 

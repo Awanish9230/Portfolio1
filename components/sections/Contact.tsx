@@ -15,7 +15,7 @@ const contactInfo = [
   {
     icon: Phone,
     label: "Phone",
-    value: "+91 73900 83864", // Placeholder
+    value: "+91 73900 83864",
     copyable: true,
   },
   {
@@ -73,7 +73,6 @@ export function Contact() {
           <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-accent-blue/5 via-transparent to-accent-purple/5 pointer-events-none"></div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 relative z-10">
-            {/* Contact Details */}
             <div className="space-y-8">
               <h3 className="text-2xl font-bold text-white mb-6">Contact Information</h3>
               
@@ -115,7 +114,6 @@ export function Contact() {
               </div>
             </div>
 
-            {/* Social Links & CTA */}
             <div className="flex flex-col justify-between space-y-8">
               <div>
                 <h3 className="text-2xl font-bold text-white mb-6">Social Profiles</h3>
