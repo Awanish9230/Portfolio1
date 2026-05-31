@@ -20,6 +20,7 @@ const projects = [
       "Automated AI credit scoring",
       "Secure biometric authentication",
       "Financial dashboard analytics",
+    ],
     github: "https://github.com/Awanish9230/IntelliCred",
     demo: "https://intellicred.onrender.com/",
     visualType: "intellicred",

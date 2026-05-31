@@ -91,7 +91,7 @@ export function About() {
                 <div className="relative pl-6 border-l-2 border-white/10">
                   <div className="absolute w-4 h-4 bg-accent-blue rounded-full -left-[9px] top-1 shadow-[0_0_10px_rgba(59,130,246,0.8)]"></div>
                   <h4 className="text-lg font-bold text-white">B.Tech in Computer Science</h4>
-                  <p className="text-accent-purple-light font-medium text-sm mb-2">2021 - 2025 (Expected)</p>
+                  <p className="text-accent-purple-light font-medium text-sm mb-2">2023 - 2027 (Expected)</p>
                   <p className="text-gray-400 text-sm">Focusing on algorithms, artificial intelligence, and software engineering principles.</p>
                 </div>
                 
