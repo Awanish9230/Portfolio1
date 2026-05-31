@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #020617; /* slate-950 */
+  --color-foreground: #f8fafc; /* slate-50 */
+  
+  --color-primary-dark: #0f172a; /* slate-900 */
+  --color-accent-purple: #7c3aed; /* violet-600 */
+  --color-accent-purple-light: #8b5cf6; /* violet-500 */
+  --color-accent-blue: #3b82f6; /* blue-500 */
+  --color-accent-cyan: #06b6d4; /* cyan-500 */
+
+  --font-sans: var(--font-inter);
+}
+
+@layer base {
+  :root {
+    --background: #020617;
+    --foreground: #f8fafc;
+  }
+}
+
+@layer base {
+  * {
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    overflow-x: hidden;
+  }
+  
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #0f172a;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #3b82f6;
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #7c3aed;
+  }
+}
+
+@layer utilities {
+  .glass-card {
+    background: rgba(15, 23, 42, 0.4);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  }
+  
+  .glass-nav {
+    background: rgba(2, 6, 23, 0.6);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+  
+  .text-gradient {
+    background: linear-gradient(to right, #3b82f6, #8b5cf6, #06b6d4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .border-gradient {
+    border: 1px solid transparent;
+    background: linear-gradient(#0f172a, #0f172a) padding-box,
+                linear-gradient(to right, #3b82f6, #8b5cf6) border-box;
+  }
+}
+
+/* Lenis standard setup */
+html.lenis, html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
